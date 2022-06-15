@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <title>NBA Quiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Try new NBA Quiz">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <link href="../main/css/styles.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav style="background-color:#343a40" class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html">NBA First Team</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">What is the First Team?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.nba.com/" target="_blank">NBA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#page-top">Quiz</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+         </nav>
+    </header>
+  <main class="parallax">
+    <h1 class="m-5 text-center text-light">QUIZ (easiest version)</h1>
+    <hr class="divider" />
+    <div class="m-5"></div>
+    <form class="container">
+      <p class="otazka pt-1">1. Who won the NBA last season</p>
+      <div class="form-group row">
+        <div class="col-md-3 mx-auto">
+          <select class="form-control" name="champs" id="champs">
+            <option>Choose</option>
+            <option>Milwaukee Bucks</option>
+            <option>Los Angeles Lakers</option>
+            <option>Golden State Warriors</option>
+            <option>Brookly Nets</option>
+          </select>
+        </div>
+      </div>
+      <p class="alert alert-success collapse multi-collapse mt-2" id="answer1">Milwaukee Bucks</p>
+      <p class="otazka pt-1">2. Which player has the highest vertical jump in NBA history?</p>
+      <div class="form-group row">
+        <div class="col-md-3 mx-auto">
+          <select class="form-control" name="vertical" id="vertical">
+            <option>Choose</option>
+            <option>Ja Morant</option>
+            <option>Lebron James</option>
+            <option>Michael Jordan</option>
+            <option>Andrew Wiggins</option>
+          </select>
+        </div>
+      </div>
+      <p class="alert alert-success collapse multi-collapse mt-2" id="answer2">Michael Jordan</p>
+      <p class="otazka pt-1">3. In which year the first All-NBA Team was selected</p>
+      <div class="form-group row">
+        <div class="col-md-3 mx-auto">
+          <input type="number" class="form-control" name="first" id="first" min="1930" max="2021" placeholder="Select">
+        </div>
+      </div>
+      <p class="alert alert-success collapse multi-collapse mt-2" id="answer3">1946</p>
+      <p class="otazka pt-1">4. Who was the MVP for the 2020/2021 season?</p>
+      <div class="form-group row">
+        <div class="col-md-3 mx-auto">
+          <select class="form-control" name="mvp" id="mvp">
+            <option>Choose the answer</option>
+            <option>Stephen Curry</option>
+            <option>Russell Westbrook(best player)</option>
+            <option>Nikola Jokić</option>
+            <option>Anthony Edwards</option>
+            <option>Lebron James</option>
+          </select>
+        </div>
+      </div>
+      <p class="alert alert-success collapse multi-collapse mt-2" id="answer4">Nikola Jokić</p>
+      <p class="otazka pt-1">5. Who scores the most 3pts in NBA history</p>
+      <div class="form-group row">
+        <div class="col-md-3 mx-auto">
+          <select class="form-control" name="3pts" id="3pts">
+            <option>Not Hard</option>
+            <option>Stephen Curry</option>
+            <option>Ray Allen</option>
+            <option>Steve Kerr</option>
+            <option>Klay Thompson</option>
+            <option>James Harden</option>
+          </select>
+        </div>
+      </div>
+      <p class="alert alert-success collapse multi-collapse mt-2" id="answer5">Stephen Curry</p>
+      <div class="container text-center">
+        <button id="button" type="button" class="btn btn-secondary mt-4" onclick="showanswers()" data-target=".multi-collapse"
+            aria-expanded="false">Check</button>
+    </div>
+    </form>
+  </main>
+  <footer class="bg-dark py-3">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-secondary">&copy; Matyáš Pierník 2022 - IT1</div></div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    var used = 0;
+    function showanswers() {
+      if(used == 0){
+      used = 1;
+      document.getElementById("champs").disabled = true;
+      document.getElementById("vertical").disabled = true;
+      document.getElementById("3pts").disabled = true;
+      document.getElementById("mvp").disabled = true;
+      document.getElementById("first").disabled = true;
+      document.getElementById("button").disabled = true;
+      setTimeout( function() {
+       $('.collapse').collapse()
+      },150)
+      }
+    }
+  </script>
+</body>
+</html>
